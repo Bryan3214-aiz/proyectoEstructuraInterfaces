@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfacePostres));
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BotonFinalizarPedido = new System.Windows.Forms.Button();
             this.BotonVolverInicio = new System.Windows.Forms.Button();
@@ -44,17 +43,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.pedidoPostres.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(631, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BIENVENIDO A LA REPOSTERIA UH";
             // 
             // label2
             // 
@@ -81,6 +69,7 @@
             this.BotonFinalizarPedido.TabIndex = 11;
             this.BotonFinalizarPedido.Text = "Finalizar pedido ";
             this.BotonFinalizarPedido.UseVisualStyleBackColor = false;
+            this.BotonFinalizarPedido.Click += new System.EventHandler(this.BotonFinalizarPedido_Click);
             // 
             // BotonVolverInicio
             // 
@@ -170,7 +159,6 @@
             this.Controls.Add(this.BotonVolverInicio);
             this.Controls.Add(this.BotonFinalizarPedido);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -188,8 +176,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BotonFinalizarPedido;
         private System.Windows.Forms.Button BotonVolverInicio;

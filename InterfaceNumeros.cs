@@ -16,17 +16,18 @@ namespace proyectoEstructuraInterfaces
         {
             InitializeComponent();
         }
+        //
         //Metodos creados individualmente para cada textbox y asi detectar si se ingreso un valor diferente del que se solicita.
         private void controlBotones1()
         {
-            if (int.TryParse(NumeroUno.Text.Trim(), out _))
+            if (int.TryParse(NumeroUnoI.Text.Trim(), out _))
             {
-                errorProvider1.SetError(NumeroUno, "");
+                errorProvider1.SetError(NumeroUnoI, "");
             }
             else
             {
-                errorProvider1.SetError(NumeroUno, "El valor debe ser un número entero");
-                NumeroUno.Focus();
+                errorProvider1.SetError(NumeroUnoI, "El valor debe ser un número entero");
+                NumeroUnoI.Focus();
             }
         }
         private void controlBotones2()
@@ -107,6 +108,56 @@ namespace proyectoEstructuraInterfaces
         private void BotonVolverInicio_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void EnviarNumeros_Click(object sender, EventArgs e)
+        {
+
+        }
+        public class Ejercicio23
+        {
+            public int num1, num2, num3, num4, num5;
+            public int mayor, medio1, medio2, medio3, menor;
+            public int numeroIngresado;
+            public void CalculoNumeros()
+            {
+                // Aquí puedes interactuar con los controles de Windows Forms
+                List<int> list = new List<int>();
+
+                for (int i = 1; i <= 5; i++)
+                {
+                    numeroIngresado = int.Parse(Console.ReadLine());
+                    if (i == 1)
+                    {
+                        num1 = numeroIngresado;
+                    }
+                    else if (i == 2)
+                    {
+                        num2 = numeroIngresado;
+                    }
+                    else if (i == 3)
+                    {
+                        num3 = numeroIngresado;
+                    }
+                    else if (i == 4)
+                    {
+                        num4 = numeroIngresado;
+                    }
+                    else if (i == 5)
+                    {
+                        num5 = numeroIngresado;
+                    }
+                }
+                //ver cual es número mayor, menor y el del medio
+                int menor = Math.Min(Math.Min(Math.Min(Math.Min(num1, num2), num3), num4), num5);
+                int mayor = Math.Max(Math.Max(Math.Max(Math.Max(num1, num2), num3), num4), num5);
+
+                int medio1 = Math.Min(Math.Max(Math.Min(num1, num2), Math.Min(num3, num4)), Math.Min(Math.Max(num1, num2), num5));
+                int medio2 = Math.Min(Math.Max(Math.Min(num1, num3), Math.Min(num2, num4)), Math.Min(Math.Max(num1, num3), num5));
+                int medio3 = Math.Min(Math.Max(Math.Min(num1, num4), Math.Min(num2, num3)), Math.Min(Math.Max(num1, num4), num5));
+
+                // Por ejemplo, en lugar de Console.WriteLine, puedes usar MessageBox.Show
+                MessageBox.Show("Cálculos realizados. Ver resultados en la lista.");
+            }
         }
     }
 }

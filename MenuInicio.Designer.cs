@@ -33,6 +33,7 @@
             this.botonPostres = new System.Windows.Forms.Button();
             this.botonNumeros = new System.Windows.Forms.Button();
             this.botonSalir = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -68,11 +69,29 @@
             this.botonSalir.UseVisualStyleBackColor = false;
             this.botonSalir.Click += new System.EventHandler(this.botonSalir_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Cursor = System.Windows.Forms.Cursors.No;
+            resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            resources.GetString("listBox1.Items"),
+            resources.GetString("listBox1.Items1"),
+            resources.GetString("listBox1.Items2"),
+            resources.GetString("listBox1.Items3"),
+            resources.GetString("listBox1.Items4")});
+            this.listBox1.Name = "listBox1";
+            // 
             // menuInicio
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonNumeros);
             this.Controls.Add(this.botonPostres);
@@ -93,6 +112,7 @@
         private System.Windows.Forms.Button botonPostres;
         private System.Windows.Forms.Button botonNumeros;
         private System.Windows.Forms.Button botonSalir;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

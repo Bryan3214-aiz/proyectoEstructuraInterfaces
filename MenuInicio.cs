@@ -21,12 +21,10 @@ namespace proyectoEstructuraInterfaces
         {
             this.Close();
         }
-
         private void botonPostres_Click(object sender, EventArgs e)
         {
-
-            using (InterfacePostres ventanaPostres = new InterfacePostres())
-                ventanaPostres.ShowDialog();
+            using (MenuPanaderia ventanaMenuPanaderia = new MenuPanaderia())
+                ventanaMenuPanaderia.ShowDialog();
         }
 
         private void botonNumeros_Click(object sender, EventArgs e)
