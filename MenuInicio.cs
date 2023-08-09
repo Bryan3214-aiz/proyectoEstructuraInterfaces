@@ -28,5 +28,11 @@ namespace proyectoEstructuraInterfaces
             using (InterfacePostres ventanaPostres = new InterfacePostres())
                 ventanaPostres.ShowDialog();
         }
+
+        private void botonNumeros_Click(object sender, EventArgs e)
+        {
+            using (InterfaceNumeros ventanaNumeros = new InterfaceNumeros())
+                ventanaNumeros.ShowDialog();
+        }
     }
 }

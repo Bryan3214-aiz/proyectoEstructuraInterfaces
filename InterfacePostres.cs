@@ -17,10 +17,6 @@ namespace proyectoEstructuraInterfaces
             InitializeComponent();
         }
 
-        private void InterfacePostres_Load(object sender, EventArgs e)
-        {
-            BotonFinalizarPedido.Enabled = false;
-        }
         private void controlBotones1()
         {
             if (IngresarPostre.Text.Trim() != string.Empty && IngresarPostre.Text.All(char.IsLetter))
@@ -42,40 +38,18 @@ namespace proyectoEstructuraInterfaces
                 IngresarPostre.Focus();
             }
         }
-
-        private void IngresarPostre_TextChanged(object sender, EventArgs e)
+        private void IngresarPostre_TextChanged_1(object sender, EventArgs e)
         {
             controlBotones1();
         }
-
         private void BotonVolverInicio_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        //private void controlBotones2()
-        //{
-        //    if (IngresarIngredientes.Text.Trim() != string.Empty && IngresarIngredientes.Text.All(char.IsLetter))
-        //    {
-        //        BotonFinalizarPedido.Enabled = true;
-        //        errorProvider1.SetError(IngresarPostre, "");
-        //    }
-        //    else
-        //    {
-        //        if (!(IngresarIngredientes.Text.All(char.IsLetter)))
-        //        {
-        //            errorProvider1.SetError(IngresarIngredientes, "El postre debe contener solo letras");
-        //        }
-        //        else
-        //        {
-        //            errorProvider1.SetError(IngresarIngredientes, "Error al introducir el postre");
-        //        }
-        //        BotonFinalizarPedido.Enabled = false;
-        //        IngresarIngredientes.Focus();
-        //    }
-        //}
-        //private void IngresarIngredientes_TextChanged(object sender, EventArgs e)
-        //{
-        //    controlBotones2();
-        //}
+
+        private void InterfacePostres_Load(object sender, EventArgs e)
+        {
+            BotonFinalizarPedido.Enabled = false;
+        }
     }
 }

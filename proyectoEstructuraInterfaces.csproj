@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfaceNumeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceNumeros.Designer.cs">
+      <DependentUpon>InterfaceNumeros.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacePostres.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InterfaceNumeros.resx">
+      <DependentUpon>InterfaceNumeros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacePostres.resx">
       <DependentUpon>InterfacePostres.cs</DependentUpon>
     </EmbeddedResource>

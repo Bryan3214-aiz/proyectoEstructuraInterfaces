@@ -58,6 +58,7 @@
             resources.ApplyResources(this.botonNumeros, "botonNumeros");
             this.botonNumeros.Name = "botonNumeros";
             this.botonNumeros.UseVisualStyleBackColor = false;
+            this.botonNumeros.Click += new System.EventHandler(this.botonNumeros_Click);
             // 
             // botonSalir
             // 
