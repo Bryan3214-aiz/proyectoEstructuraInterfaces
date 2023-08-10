@@ -26,16 +26,5 @@ namespace proyectoEstructuraInterfaces
         {
             postre.AddLast(ingrediente);
         }
-        public void Eliminar()
-        {
-            postre.Remove(ingrediente);
-        }
-        public void Imprimir()
-        {
-            foreach (string item in postre)
-            {
-                Console.WriteLine(item);
-            }
-        }
     }
 }

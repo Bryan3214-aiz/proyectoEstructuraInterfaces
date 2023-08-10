@@ -59,6 +59,18 @@
     <Compile Include="InterfacePostres.Designer.cs">
       <DependentUpon>InterfacePostres.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacePostresEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacePostresEliminar.Designer.cs">
+      <DependentUpon>InterfacePostresEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacePostresMostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacePostresMostrar.Designer.cs">
+      <DependentUpon>InterfacePostresMostrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacePostres.resx">
       <DependentUpon>InterfacePostres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacePostresEliminar.resx">
+      <DependentUpon>InterfacePostresEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacePostresMostrar.resx">
+      <DependentUpon>InterfacePostresMostrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuInicio.aa.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>

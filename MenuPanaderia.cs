@@ -27,5 +27,17 @@ namespace proyectoEstructuraInterfaces
         {
             this.Dispose();
         }
+
+        private void menuEliminar_Click(object sender, EventArgs e)
+        {
+            using (InterfacePostresEliminar ventanaPostresEliminar  = new InterfacePostresEliminar())
+                ventanaPostresEliminar.ShowDialog();
+        }
+
+        private void MostrarPedidos_Click(object sender, EventArgs e)
+        {
+            using (InterfacePostresMostrar VentanaMostrarPedidos = new InterfacePostresMostrar())
+                VentanaMostrarPedidos.ShowDialog();
+        }
     }
 }

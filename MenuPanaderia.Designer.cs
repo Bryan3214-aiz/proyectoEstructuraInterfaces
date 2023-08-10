@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPanaderia));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuOrdenar = new System.Windows.Forms.Button();
-            this.menuEliminar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.MostrarPedidos = new System.Windows.Forms.Button();
+            this.menuEliminar = new System.Windows.Forms.Button();
+            this.menuOrdenar = new System.Windows.Forms.Button();
             this.VolverInicio = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,13 +54,52 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.MostrarPedidos);
             this.panel1.Controls.Add(this.menuEliminar);
             this.panel1.Controls.Add(this.menuOrdenar);
             this.panel1.Location = new System.Drawing.Point(82, 132);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(630, 186);
             this.panel1.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(159, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(302, 18);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "SELECCIONE UNA OPCION DEL MENU";
+            // 
+            // MostrarPedidos
+            // 
+            this.MostrarPedidos.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.MostrarPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MostrarPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MostrarPedidos.ForeColor = System.Drawing.Color.White;
+            this.MostrarPedidos.Location = new System.Drawing.Point(480, 59);
+            this.MostrarPedidos.Name = "MostrarPedidos";
+            this.MostrarPedidos.Size = new System.Drawing.Size(116, 69);
+            this.MostrarPedidos.TabIndex = 3;
+            this.MostrarPedidos.Text = "MOSTRAR PEDIDOS";
+            this.MostrarPedidos.UseVisualStyleBackColor = false;
+            this.MostrarPedidos.Click += new System.EventHandler(this.MostrarPedidos_Click);
+            // 
+            // menuEliminar
+            // 
+            this.menuEliminar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.menuEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.menuEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuEliminar.ForeColor = System.Drawing.Color.White;
+            this.menuEliminar.Location = new System.Drawing.Point(248, 59);
+            this.menuEliminar.Name = "menuEliminar";
+            this.menuEliminar.Size = new System.Drawing.Size(116, 69);
+            this.menuEliminar.TabIndex = 1;
+            this.menuEliminar.Text = "ELIMINAR POSTRE";
+            this.menuEliminar.UseVisualStyleBackColor = false;
+            this.menuEliminar.Click += new System.EventHandler(this.menuEliminar_Click);
             // 
             // menuOrdenar
             // 
@@ -75,43 +114,6 @@
             this.menuOrdenar.Text = "ORDENAR POSTRE";
             this.menuOrdenar.UseVisualStyleBackColor = false;
             this.menuOrdenar.Click += new System.EventHandler(this.menuOrdenar_Click);
-            // 
-            // menuEliminar
-            // 
-            this.menuEliminar.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.menuEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.menuEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuEliminar.ForeColor = System.Drawing.Color.White;
-            this.menuEliminar.Location = new System.Drawing.Point(248, 59);
-            this.menuEliminar.Name = "menuEliminar";
-            this.menuEliminar.Size = new System.Drawing.Size(116, 69);
-            this.menuEliminar.TabIndex = 1;
-            this.menuEliminar.Text = "ELIMINAR POSTRE";
-            this.menuEliminar.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(480, 59);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 69);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "MOSTRAR PEDIDOS";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(159, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(302, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "SELECCIONE UNA OPCION DEL MENU";
             // 
             // VolverInicio
             // 
@@ -132,7 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(804, 461);
             this.Controls.Add(this.VolverInicio);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -153,7 +155,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button MostrarPedidos;
         private System.Windows.Forms.Button menuEliminar;
         private System.Windows.Forms.Button menuOrdenar;
         private System.Windows.Forms.Button VolverInicio;
