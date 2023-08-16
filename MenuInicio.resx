@@ -243,49 +243,38 @@
   <data name="&gt;&gt;botonSalir.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="listBox1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Georgia, 12pt</value>
   </data>
-  <data name="listBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Off</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 362</value>
   </data>
-  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 90</value>
   </data>
-  <data name="listBox1.Items" xml:space="preserve">
-    <value>INTREGRANTES:</value>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="listBox1.Items1" xml:space="preserve">
-    <value>1 - Bryan Leiva Mejia</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>INTREGRANTES:
+1 - Bryan Leiva Mejia
+2 - Kenny Aragon Cascante
+3 - Sebastian Mora Rodriguez
+4 - ChatGPT xd</value>
   </data>
-  <data name="listBox1.Items2" xml:space="preserve">
-    <value>2 - Kenny Aragon Cascante</value>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
   </data>
-  <data name="listBox1.Items3" xml:space="preserve">
-    <value>3 - Sebastian Mora Rodriguez</value>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="listBox1.Items4" xml:space="preserve">
-    <value>4 - ChatGPT xd</value>
-  </data>
-  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 359</value>
-  </data>
-  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 90</value>
-  </data>
-  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
-    <value>listBox1</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

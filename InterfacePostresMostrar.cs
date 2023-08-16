@@ -16,5 +16,10 @@ namespace proyectoEstructuraInterfaces
         {
             InitializeComponent();
         }
+
+        private void BotonVolverInicio_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

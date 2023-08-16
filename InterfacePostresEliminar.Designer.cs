@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfacePostresEliminar));
             this.pedidoPostres = new System.Windows.Forms.Panel();
             this.IngresarIngredientes = new System.Windows.Forms.TextBox();
@@ -38,7 +39,9 @@
             this.BotonVolverInicio = new System.Windows.Forms.Button();
             this.BotonEliminarPedido = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pedidoPostres.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pedidoPostres
@@ -51,7 +54,7 @@
             this.pedidoPostres.Controls.Add(this.label3);
             this.pedidoPostres.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pedidoPostres.ForeColor = System.Drawing.Color.White;
-            this.pedidoPostres.Location = new System.Drawing.Point(70, 128);
+            this.pedidoPostres.Location = new System.Drawing.Point(69, 140);
             this.pedidoPostres.Name = "pedidoPostres";
             this.pedidoPostres.Size = new System.Drawing.Size(388, 154);
             this.pedidoPostres.TabIndex = 18;
@@ -69,6 +72,7 @@
             this.IngresarPostre.Name = "IngresarPostre";
             this.IngresarPostre.Size = new System.Drawing.Size(185, 22);
             this.IngresarPostre.TabIndex = 4;
+            this.IngresarPostre.TextChanged += new System.EventHandler(this.IngresarPostre_TextChanged);
             // 
             // label5
             // 
@@ -120,25 +124,30 @@
             this.BotonEliminarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BotonEliminarPedido.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonEliminarPedido.ForeColor = System.Drawing.Color.White;
-            this.BotonEliminarPedido.Location = new System.Drawing.Point(534, 175);
+            this.BotonEliminarPedido.Location = new System.Drawing.Point(533, 187);
             this.BotonEliminarPedido.Name = "BotonEliminarPedido";
             this.BotonEliminarPedido.Size = new System.Drawing.Size(201, 80);
             this.BotonEliminarPedido.TabIndex = 16;
             this.BotonEliminarPedido.Text = "Eliminar pedido";
             this.BotonEliminarPedido.UseVisualStyleBackColor = false;
+            this.BotonEliminarPedido.Click += new System.EventHandler(this.BotonEliminarPedido_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(197, 55);
+            this.label2.Location = new System.Drawing.Point(196, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(461, 36);
             this.label2.TabIndex = 15;
             this.label2.Text = "Nota importante:\r\nEl cliente debe ingresar el nombre del postre que desea elimina" +
     "r.\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // InterfacePostresEliminar
             // 
@@ -154,8 +163,10 @@
             this.Name = "InterfacePostresEliminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar pedidos";
+            this.Load += new System.EventHandler(this.InterfacePostresEliminar_Load);
             this.pedidoPostres.ResumeLayout(false);
             this.pedidoPostres.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +183,6 @@
         private System.Windows.Forms.Button BotonVolverInicio;
         private System.Windows.Forms.Button BotonEliminarPedido;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -54,13 +54,7 @@ namespace proyectoEstructuraInterfaces
 
         private void BotonFinalizarPedido_Click(object sender, EventArgs e)
         {
-            // Crear una instancia de la clase Persona
-            Postre postreNuevo = new Postre();
-            // Asignar los valores de los TextBox a las propiedades de la clase
-            postreNuevo.nombre = IngresarPostre.Text;
-            postreNuevo.ingrediente = IngresarIngredientes.Text;
 
-            MessageBox.Show($"\tPostre creado correctamente:\n\nNombre: {postreNuevo.nombre}\nIngredientes: {postreNuevo.ingrediente}");
         }
     }
 }

@@ -8,23 +8,58 @@ namespace proyectoEstructuraInterfaces
 {
     public class Postre
     {
-        /* Definir el nombre ya que es lo que va a diferenciar 
-           los postres y así poder hacer un pullup de la lista correcta */
+        List<LinkedList<string>> postres = new List<LinkedList<string>>();
+
+        // need to check this code.
+        List<string> nombrePostre = new List<string>();
         public string nombre { get; set; }
-        public string ingrediente { get; set; }
 
-        private LinkedList<string> postre = new LinkedList<string>();
-
-        public void DefinirIngrediente()
+        public void AgregarPostre()
         {
-            Console.WriteLine("Agregue ingrediente");
-            ingrediente = Console.ReadLine();
-            Agregar();
+            while (true)
+            {
+                Console.WriteLine("Ingrese el nombre del postre (o escriba 'salir' para terminar):");
+                nombre = Console.ReadLine();
+         
+                if (nombre.ToLower() == "salir")
+                    break;
+
+                LinkedList<string> ingredientes = new LinkedList<string>();
+
+                nombrePostre.Add(nombre); 
+
+                while (true)
+                {
+                    Console.WriteLine("Ingrese un ingrediente para el postre (o escriba 'fin' para terminar):");
+                    string ingrediente = Console.ReadLine();
+                    Console.Clear();
+
+                    if (ingrediente.ToLower() == "fin")
+                        break;
+
+                    ingredientes.AddLast(ingrediente);
+                }
+                postres.Add(ingredientes);
+            }
         }
-
-        private void Agregar()
+        public void Consultar()
         {
-            postre.AddLast(ingrediente);
+            Console.WriteLine("\nLista de postres y sus ingredientes:");
+
+            for (int i = 0; i < postres.Count; i++)
+            {
+                /* los datos en las listas nombrePostre e ingredientes van de la mano y
+                los valores comparten el mismo indice. Hay que ejecutar y doublecheck since I'm coding literally on github */
+
+                Console.WriteLine(nombrePostre[i]); // imprime el nombre del postre
+                foreach (var ingrediente in postres[i]) // imprime los ingredientes del postre.
+                {
+                    Console.WriteLine("- " + ingrediente);
+                }
+                Console.WriteLine();
+
+            }
+            Console.ReadKey();
         }
     }
 }

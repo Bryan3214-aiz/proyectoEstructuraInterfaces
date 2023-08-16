@@ -21,5 +21,41 @@ namespace proyectoEstructuraInterfaces
         {
             this.Dispose();
         }
+
+        private void BotonEliminarPedido_Click(object sender, EventArgs e)
+        {
+            //DWQ
+        }
+
+        private void IngresarPostre_TextChanged(object sender, EventArgs e)
+        {
+            controlBotones1();
+        }
+        private void controlBotones1()
+        {
+            if (IngresarPostre.Text.Trim() != string.Empty && IngresarPostre.Text.All(char.IsLetter))
+            {
+                BotonEliminarPedido.Enabled = true;
+                errorProvider1.SetError(IngresarPostre, "");
+            }
+            else
+            {
+                if (!(IngresarPostre.Text.All(char.IsLetter)))
+                {
+                    errorProvider1.SetError(IngresarPostre, "El postre debe contener solo letras");
+                }
+                else
+                {
+                    errorProvider1.SetError(IngresarPostre, "Error al introducir el postre");
+                }
+                BotonEliminarPedido.Enabled = false;
+                IngresarPostre.Focus();
+            }
+        }
+
+        private void InterfacePostresEliminar_Load(object sender, EventArgs e)
+        {
+            BotonEliminarPedido.Enabled = false;
+        }
     }
 }

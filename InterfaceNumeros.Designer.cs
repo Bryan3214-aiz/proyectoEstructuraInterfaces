@@ -32,13 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfaceNumeros));
             this.label1 = new System.Windows.Forms.Label();
             this.PanelNumeros = new System.Windows.Forms.Panel();
+            this.EnviarNumeros = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.listaNumeros = new System.Windows.Forms.ListBox();
             this.NumeroCinco = new System.Windows.Forms.TextBox();
             this.NumeroCuatro = new System.Windows.Forms.TextBox();
             this.NumeroTres = new System.Windows.Forms.TextBox();
             this.NumeroDos = new System.Windows.Forms.TextBox();
-            this.NumeroUnoI = new System.Windows.Forms.TextBox();
+            this.NumeroUno = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.BotonVolverInicio = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.EnviarNumeros = new System.Windows.Forms.Button();
             this.PanelNumeros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(176, 23);
+            this.label1.Location = new System.Drawing.Point(176, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(435, 34);
             this.label1.TabIndex = 1;
@@ -75,7 +75,7 @@
             this.PanelNumeros.Controls.Add(this.NumeroCuatro);
             this.PanelNumeros.Controls.Add(this.NumeroTres);
             this.PanelNumeros.Controls.Add(this.NumeroDos);
-            this.PanelNumeros.Controls.Add(this.NumeroUnoI);
+            this.PanelNumeros.Controls.Add(this.NumeroUno);
             this.PanelNumeros.Controls.Add(this.label6);
             this.PanelNumeros.Controls.Add(this.label5);
             this.PanelNumeros.Controls.Add(this.label4);
@@ -83,16 +83,28 @@
             this.PanelNumeros.Controls.Add(this.label2);
             this.PanelNumeros.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelNumeros.ForeColor = System.Drawing.Color.White;
-            this.PanelNumeros.Location = new System.Drawing.Point(79, 142);
+            this.PanelNumeros.Location = new System.Drawing.Point(79, 132);
             this.PanelNumeros.Name = "PanelNumeros";
             this.PanelNumeros.Size = new System.Drawing.Size(644, 256);
             this.PanelNumeros.TabIndex = 3;
+            // 
+            // EnviarNumeros
+            // 
+            this.EnviarNumeros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.EnviarNumeros.ForeColor = System.Drawing.Color.White;
+            this.EnviarNumeros.Location = new System.Drawing.Point(103, 205);
+            this.EnviarNumeros.Name = "EnviarNumeros";
+            this.EnviarNumeros.Size = new System.Drawing.Size(100, 39);
+            this.EnviarNumeros.TabIndex = 16;
+            this.EnviarNumeros.Text = "Enviar numeros";
+            this.EnviarNumeros.UseVisualStyleBackColor = true;
+            this.EnviarNumeros.Click += new System.EventHandler(this.EnviarNumeros_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(377, 18);
+            this.label8.Location = new System.Drawing.Point(365, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(132, 14);
             this.label8.TabIndex = 15;
@@ -100,12 +112,16 @@
             // 
             // listaNumeros
             // 
+            this.listaNumeros.BackColor = System.Drawing.SystemColors.Desktop;
+            this.listaNumeros.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listaNumeros.ForeColor = System.Drawing.Color.SkyBlue;
             this.listaNumeros.FormattingEnabled = true;
-            this.listaNumeros.ItemHeight = 14;
+            this.listaNumeros.ItemHeight = 18;
             this.listaNumeros.Location = new System.Drawing.Point(260, 35);
             this.listaNumeros.Name = "listaNumeros";
-            this.listaNumeros.Size = new System.Drawing.Size(356, 172);
+            this.listaNumeros.Size = new System.Drawing.Size(356, 166);
             this.listaNumeros.TabIndex = 12;
+            this.listaNumeros.Tag = "";
             // 
             // NumeroCinco
             // 
@@ -139,13 +155,13 @@
             this.NumeroDos.TabIndex = 8;
             this.NumeroDos.TextChanged += new System.EventHandler(this.NumeroDos_TextChanged);
             // 
-            // NumeroUnoI
+            // NumeroUno
             // 
-            this.NumeroUnoI.Location = new System.Drawing.Point(103, 35);
-            this.NumeroUnoI.Name = "NumeroUnoI";
-            this.NumeroUnoI.Size = new System.Drawing.Size(100, 20);
-            this.NumeroUnoI.TabIndex = 7;
-            this.NumeroUnoI.TextChanged += new System.EventHandler(this.NumeroUno_TextChanged);
+            this.NumeroUno.Location = new System.Drawing.Point(103, 35);
+            this.NumeroUno.Name = "NumeroUno";
+            this.NumeroUno.Size = new System.Drawing.Size(100, 20);
+            this.NumeroUno.TabIndex = 7;
+            this.NumeroUno.TextChanged += new System.EventHandler(this.NumeroUno_TextChanged);
             // 
             // label6
             // 
@@ -211,7 +227,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(127, 78);
+            this.label7.Location = new System.Drawing.Point(127, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(525, 48);
             this.label7.TabIndex = 14;
@@ -223,18 +239,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // EnviarNumeros
-            // 
-            this.EnviarNumeros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.EnviarNumeros.ForeColor = System.Drawing.Color.White;
-            this.EnviarNumeros.Location = new System.Drawing.Point(103, 205);
-            this.EnviarNumeros.Name = "EnviarNumeros";
-            this.EnviarNumeros.Size = new System.Drawing.Size(100, 39);
-            this.EnviarNumeros.TabIndex = 16;
-            this.EnviarNumeros.Text = "Enviar numeros";
-            this.EnviarNumeros.UseVisualStyleBackColor = true;
-            this.EnviarNumeros.Click += new System.EventHandler(this.EnviarNumeros_Click);
             // 
             // InterfaceNumeros
             // 
@@ -253,6 +257,7 @@
             this.Name = "InterfaceNumeros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InterfaceNumeros";
+            this.Load += new System.EventHandler(this.InterfaceNumeros_Load);
             this.PanelNumeros.ResumeLayout(false);
             this.PanelNumeros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -275,7 +280,7 @@
         private System.Windows.Forms.TextBox NumeroCuatro;
         private System.Windows.Forms.TextBox NumeroTres;
         private System.Windows.Forms.TextBox NumeroDos;
-        private System.Windows.Forms.TextBox NumeroUnoI;
+        private System.Windows.Forms.TextBox NumeroUno;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label8;

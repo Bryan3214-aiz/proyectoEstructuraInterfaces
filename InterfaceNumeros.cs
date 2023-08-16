@@ -12,6 +12,7 @@ namespace proyectoEstructuraInterfaces
 {
     public partial class InterfaceNumeros : Form
     {
+        private List<int> numerosLista = new List<int>(); //En esta lista global se guardan todos los numeros.
         public InterfaceNumeros()
         {
             InitializeComponent();
@@ -20,14 +21,14 @@ namespace proyectoEstructuraInterfaces
         //Metodos creados individualmente para cada textbox y asi detectar si se ingreso un valor diferente del que se solicita.
         private void controlBotones1()
         {
-            if (int.TryParse(NumeroUnoI.Text.Trim(), out _))
+            if (int.TryParse(NumeroUno.Text.Trim(), out _))
             {
-                errorProvider1.SetError(NumeroUnoI, "");
+                errorProvider1.SetError(NumeroUno, "");
             }
             else
             {
-                errorProvider1.SetError(NumeroUnoI, "El valor debe ser un número entero");
-                NumeroUnoI.Focus();
+                errorProvider1.SetError(NumeroUno, "El valor debe ser un número entero");
+                NumeroUno.Focus();
             }
         }
         private void controlBotones2()
@@ -70,6 +71,7 @@ namespace proyectoEstructuraInterfaces
         {
             if (int.TryParse(NumeroCinco.Text.Trim(), out _))
             {
+                EnviarNumeros.Enabled = true;
                 errorProvider1.SetError(NumeroCinco, "");
             }
             else
@@ -111,53 +113,44 @@ namespace proyectoEstructuraInterfaces
         }
         private void EnviarNumeros_Click(object sender, EventArgs e)
         {
-
-        }
-        public class Ejercicio23
-        {
-            public int num1, num2, num3, num4, num5;
-            public int mayor, medio1, medio2, medio3, menor;
-            public int numeroIngresado;
-            public void CalculoNumeros()
+            int num1 = Convert.ToInt32(NumeroUno.Text);
+            int num2 = Convert.ToInt32(NumeroDos.Text);
+            int num3 = Convert.ToInt32(NumeroTres.Text);
+            int num4 = Convert.ToInt32(NumeroCuatro.Text);
+            int num5 = Convert.ToInt32(NumeroCinco.Text);
+            numerosLista.Clear(); //Primero hace una limpieza de la lista, por si ya existia algun valor. Luego agrega los numeroos que se ingresaron a la lista. 
+            numerosLista.Add(num1);
+            numerosLista.Add(num2);
+            numerosLista.Add(num3);
+            numerosLista.Add(num4);
+            numerosLista.Add(num5);
+            // Encuentra el mayor y el menor
+            int mayor = numerosLista.Max();
+            int menor = numerosLista.Min();
+            var intermedios = numerosLista.Where(num => num != mayor && num != menor).OrderBy(num => num).ToList();
+            for (int i = menor; i <= mayor; i++)
             {
-                // Aquí puedes interactuar con los controles de Windows Forms
-                List<int> list = new List<int>();
-
-                for (int i = 1; i <= 5; i++)
+                if (!numerosLista.Contains(i))
                 {
-                    numeroIngresado = int.Parse(Console.ReadLine());
-                    if (i == 1)
-                    {
-                        num1 = numeroIngresado;
-                    }
-                    else if (i == 2)
-                    {
-                        num2 = numeroIngresado;
-                    }
-                    else if (i == 3)
-                    {
-                        num3 = numeroIngresado;
-                    }
-                    else if (i == 4)
-                    {
-                        num4 = numeroIngresado;
-                    }
-                    else if (i == 5)
-                    {
-                        num5 = numeroIngresado;
-                    }
+                    numerosLista.Add(i);
                 }
-                //ver cual es número mayor, menor y el del medio
-                int menor = Math.Min(Math.Min(Math.Min(Math.Min(num1, num2), num3), num4), num5);
-                int mayor = Math.Max(Math.Max(Math.Max(Math.Max(num1, num2), num3), num4), num5);
-
-                int medio1 = Math.Min(Math.Max(Math.Min(num1, num2), Math.Min(num3, num4)), Math.Min(Math.Max(num1, num2), num5));
-                int medio2 = Math.Min(Math.Max(Math.Min(num1, num3), Math.Min(num2, num4)), Math.Min(Math.Max(num1, num3), num5));
-                int medio3 = Math.Min(Math.Max(Math.Min(num1, num4), Math.Min(num2, num3)), Math.Min(Math.Max(num1, num4), num5));
-
-                // Por ejemplo, en lugar de Console.WriteLine, puedes usar MessageBox.Show
-                MessageBox.Show("Cálculos realizados. Ver resultados en la lista.");
             }
+            // Ordena la lista
+            numerosLista.Sort();
+
+            // Mostrar los valores en la ListBox
+            listaNumeros.Items.Clear();
+            listaNumeros.Items.Add($"Mayor: {mayor}");
+            listaNumeros.Items.Add($"Menor: {menor}");
+            listaNumeros.Items.Add("Valores intermedios:");
+            listaNumeros.Items.AddRange(intermedios.Select(num => num.ToString()).ToArray());
+            listaNumeros.Items.Add("Números faltantes:");
+            listaNumeros.Items.AddRange(numerosLista.Select(num => num.ToString()).ToArray());
+        }
+
+        private void InterfaceNumeros_Load(object sender, EventArgs e)
+        {
+            EnviarNumeros.Enabled = false;
         }
     }
 }
