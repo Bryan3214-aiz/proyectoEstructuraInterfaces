@@ -30,10 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfaceNumeros));
-            this.label1 = new System.Windows.Forms.Label();
-            this.PanelNumeros = new System.Windows.Forms.Panel();
+            this.BotonVolverInicio = new System.Windows.Forms.Button();
             this.EnviarNumeros = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.listaNumeros = new System.Windows.Forms.ListBox();
             this.NumeroCinco = new System.Windows.Forms.TextBox();
             this.NumeroCuatro = new System.Windows.Forms.TextBox();
@@ -45,48 +43,28 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BotonVolverInicio = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.PanelNumeros = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.PanelNumeros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // BotonVolverInicio
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(176, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(435, 34);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "PROGRAMA DE NUMEROS UH";
-            this.label1.UseWaitCursor = true;
-            // 
-            // PanelNumeros
-            // 
-            this.PanelNumeros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(120)))));
-            this.PanelNumeros.Controls.Add(this.EnviarNumeros);
-            this.PanelNumeros.Controls.Add(this.label8);
-            this.PanelNumeros.Controls.Add(this.listaNumeros);
-            this.PanelNumeros.Controls.Add(this.NumeroCinco);
-            this.PanelNumeros.Controls.Add(this.NumeroCuatro);
-            this.PanelNumeros.Controls.Add(this.NumeroTres);
-            this.PanelNumeros.Controls.Add(this.NumeroDos);
-            this.PanelNumeros.Controls.Add(this.NumeroUno);
-            this.PanelNumeros.Controls.Add(this.label6);
-            this.PanelNumeros.Controls.Add(this.label5);
-            this.PanelNumeros.Controls.Add(this.label4);
-            this.PanelNumeros.Controls.Add(this.label3);
-            this.PanelNumeros.Controls.Add(this.label2);
-            this.PanelNumeros.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelNumeros.ForeColor = System.Drawing.Color.White;
-            this.PanelNumeros.Location = new System.Drawing.Point(79, 132);
-            this.PanelNumeros.Name = "PanelNumeros";
-            this.PanelNumeros.Size = new System.Drawing.Size(644, 256);
-            this.PanelNumeros.TabIndex = 3;
+            this.BotonVolverInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(120)))));
+            this.BotonVolverInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BotonVolverInicio.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonVolverInicio.ForeColor = System.Drawing.Color.White;
+            this.BotonVolverInicio.Location = new System.Drawing.Point(591, 402);
+            this.BotonVolverInicio.Name = "BotonVolverInicio";
+            this.BotonVolverInicio.Size = new System.Drawing.Size(191, 45);
+            this.BotonVolverInicio.TabIndex = 17;
+            this.BotonVolverInicio.Text = "Volver al inicio";
+            this.BotonVolverInicio.UseVisualStyleBackColor = false;
+            this.BotonVolverInicio.Click += new System.EventHandler(this.BotonVolverInicio_Click);
             // 
             // EnviarNumeros
             // 
@@ -98,17 +76,7 @@
             this.EnviarNumeros.TabIndex = 16;
             this.EnviarNumeros.Text = "Enviar numeros";
             this.EnviarNumeros.UseVisualStyleBackColor = true;
-            this.EnviarNumeros.Click += new System.EventHandler(this.EnviarNumeros_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(365, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 14);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "LISTA DE NUMEROS";
+            this.EnviarNumeros.Click += new System.EventHandler(this.EnviarNumeros_Click_1);
             // 
             // listaNumeros
             // 
@@ -208,33 +176,65 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Numero 1:";
             // 
-            // BotonVolverInicio
-            // 
-            this.BotonVolverInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(120)))));
-            this.BotonVolverInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BotonVolverInicio.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonVolverInicio.ForeColor = System.Drawing.Color.White;
-            this.BotonVolverInicio.Location = new System.Drawing.Point(601, 404);
-            this.BotonVolverInicio.Name = "BotonVolverInicio";
-            this.BotonVolverInicio.Size = new System.Drawing.Size(191, 45);
-            this.BotonVolverInicio.TabIndex = 13;
-            this.BotonVolverInicio.Text = "Volver al inicio";
-            this.BotonVolverInicio.UseVisualStyleBackColor = false;
-            this.BotonVolverInicio.Click += new System.EventHandler(this.BotonVolverInicio_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(127, 70);
+            this.label7.Location = new System.Drawing.Point(117, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(525, 48);
-            this.label7.TabIndex = 14;
+            this.label7.TabIndex = 18;
             this.label7.Text = "Instrucciones:\r\nIngrese 5 numeros diferentes y se generara automaticamente una li" +
     "sta completando\r\nlos rangos de dichos numeros desde el más pequeño hasta el más " +
     "grande.";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // PanelNumeros
+            // 
+            this.PanelNumeros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(120)))));
+            this.PanelNumeros.Controls.Add(this.EnviarNumeros);
+            this.PanelNumeros.Controls.Add(this.label8);
+            this.PanelNumeros.Controls.Add(this.listaNumeros);
+            this.PanelNumeros.Controls.Add(this.NumeroCinco);
+            this.PanelNumeros.Controls.Add(this.NumeroCuatro);
+            this.PanelNumeros.Controls.Add(this.NumeroTres);
+            this.PanelNumeros.Controls.Add(this.NumeroDos);
+            this.PanelNumeros.Controls.Add(this.NumeroUno);
+            this.PanelNumeros.Controls.Add(this.label6);
+            this.PanelNumeros.Controls.Add(this.label5);
+            this.PanelNumeros.Controls.Add(this.label4);
+            this.PanelNumeros.Controls.Add(this.label3);
+            this.PanelNumeros.Controls.Add(this.label2);
+            this.PanelNumeros.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelNumeros.ForeColor = System.Drawing.Color.White;
+            this.PanelNumeros.Location = new System.Drawing.Point(69, 130);
+            this.PanelNumeros.Name = "PanelNumeros";
+            this.PanelNumeros.Size = new System.Drawing.Size(644, 256);
+            this.PanelNumeros.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(365, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 14);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "LISTA DE NUMEROS";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(166, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(435, 34);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "PROGRAMA DE NUMEROS UH";
+            this.label1.UseWaitCursor = true;
             // 
             // errorProvider1
             // 
@@ -246,8 +246,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(804, 461);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.BotonVolverInicio);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.PanelNumeros);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -256,7 +256,7 @@
             this.MinimizeBox = false;
             this.Name = "InterfaceNumeros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InterfaceNumeros";
+            this.Text = "Programa de numeros";
             this.Load += new System.EventHandler(this.InterfaceNumeros_Load);
             this.PanelNumeros.ResumeLayout(false);
             this.PanelNumeros.PerformLayout();
@@ -268,23 +268,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel PanelNumeros;
         private System.Windows.Forms.Button BotonVolverInicio;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button EnviarNumeros;
         private System.Windows.Forms.ListBox listaNumeros;
         private System.Windows.Forms.TextBox NumeroCinco;
         private System.Windows.Forms.TextBox NumeroCuatro;
         private System.Windows.Forms.TextBox NumeroTres;
         private System.Windows.Forms.TextBox NumeroDos;
         private System.Windows.Forms.TextBox NumeroUno;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button EnviarNumeros;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel PanelNumeros;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

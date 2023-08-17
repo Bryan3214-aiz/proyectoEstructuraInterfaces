@@ -46,30 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsPostre.cs" />
-    <Compile Include="InterfaceNumeros.cs">
+    <Compile Include="ClsPostres.cs" />
+    <Compile Include="InterfazNumeros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfaceNumeros.Designer.cs">
-      <DependentUpon>InterfaceNumeros.cs</DependentUpon>
+    <Compile Include="InterfazNumeros.Designer.cs">
+      <DependentUpon>InterfazNumeros.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacePostres.cs">
+    <Compile Include="InterfazPostres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfacePostres.Designer.cs">
-      <DependentUpon>InterfacePostres.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacePostresEliminar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacePostresEliminar.Designer.cs">
-      <DependentUpon>InterfacePostresEliminar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacePostresMostrar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacePostresMostrar.Designer.cs">
-      <DependentUpon>InterfacePostresMostrar.cs</DependentUpon>
+    <Compile Include="InterfazPostres.Designer.cs">
+      <DependentUpon>InterfazPostres.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuInicio.cs">
       <SubType>Form</SubType>
@@ -77,25 +65,13 @@
     <Compile Include="MenuInicio.Designer.cs">
       <DependentUpon>MenuInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPanaderia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPanaderia.Designer.cs">
-      <DependentUpon>MenuPanaderia.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="InterfaceNumeros.resx">
-      <DependentUpon>InterfaceNumeros.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazNumeros.resx">
+      <DependentUpon>InterfazNumeros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacePostres.resx">
-      <DependentUpon>InterfacePostres.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacePostresEliminar.resx">
-      <DependentUpon>InterfacePostresEliminar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacePostresMostrar.resx">
-      <DependentUpon>InterfacePostresMostrar.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazPostres.resx">
+      <DependentUpon>InterfazPostres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuInicio.aa.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>
@@ -105,9 +81,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuInicio.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuPanaderia.resx">
-      <DependentUpon>MenuPanaderia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
