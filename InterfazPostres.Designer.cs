@@ -38,6 +38,7 @@
             this.DarDeAltaButton = new System.Windows.Forms.Button();
             this.AgregarIngredientesButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.MostrarTablas = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.postresListBox = new System.Windows.Forms.ListBox();
@@ -145,14 +146,29 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel2.Controls.Add(this.MostrarTablas);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.postresListBox);
             this.panel2.Controls.Add(this.ingredientesListBox);
-            this.panel2.Location = new System.Drawing.Point(343, 111);
+            this.panel2.Location = new System.Drawing.Point(343, 114);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(462, 281);
+            this.panel2.Size = new System.Drawing.Size(462, 272);
             this.panel2.TabIndex = 17;
+            // 
+            // MostrarTablas
+            // 
+            this.MostrarTablas.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.MostrarTablas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MostrarTablas.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MostrarTablas.ForeColor = System.Drawing.Color.White;
+            this.MostrarTablas.Location = new System.Drawing.Point(166, 218);
+            this.MostrarTablas.Name = "MostrarTablas";
+            this.MostrarTablas.Size = new System.Drawing.Size(139, 41);
+            this.MostrarTablas.TabIndex = 23;
+            this.MostrarTablas.Text = "Mostrar postres";
+            this.MostrarTablas.UseVisualStyleBackColor = false;
+            this.MostrarTablas.Click += new System.EventHandler(this.MostrarTablas_Click);
             // 
             // label6
             // 
@@ -180,7 +196,7 @@
             this.postresListBox.ItemHeight = 14;
             this.postresListBox.Location = new System.Drawing.Point(23, 40);
             this.postresListBox.Name = "postresListBox";
-            this.postresListBox.Size = new System.Drawing.Size(208, 214);
+            this.postresListBox.Size = new System.Drawing.Size(208, 172);
             this.postresListBox.TabIndex = 19;
             // 
             // ingredientesListBox
@@ -189,7 +205,7 @@
             this.ingredientesListBox.ItemHeight = 14;
             this.ingredientesListBox.Location = new System.Drawing.Point(237, 40);
             this.ingredientesListBox.Name = "ingredientesListBox";
-            this.ingredientesListBox.Size = new System.Drawing.Size(208, 214);
+            this.ingredientesListBox.Size = new System.Drawing.Size(208, 172);
             this.ingredientesListBox.TabIndex = 0;
             // 
             // label1
@@ -323,5 +339,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxIngredientes;
         private System.Windows.Forms.ComboBox postresComboBox;
+        private System.Windows.Forms.Button MostrarTablas;
     }
 }

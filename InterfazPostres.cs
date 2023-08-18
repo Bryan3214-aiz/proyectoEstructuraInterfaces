@@ -24,11 +24,6 @@ namespace proyectoEstructuraInterfaces
                 ingredientes.Add(new LinkedList<string>());
             }
         }
-
-        private void buttonSalir_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
         private void ControlBotones1()
         {
             if (nuevoPostreTextBox.Text.Trim() != string.Empty && nuevoPostreTextBox.Text.All(char.IsLetter))
@@ -47,7 +42,14 @@ namespace proyectoEstructuraInterfaces
                     errorProvider1.SetError(nuevoPostreTextBox, "Error al introducir el postre");
                 }
                 DarDeAltaButton.Enabled = false;
+                nuevoPostreTextBox.Focus();
             }
+        }
+
+
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
         private void DarDeBajaButton_Click(object sender, EventArgs e)
@@ -72,11 +74,6 @@ namespace proyectoEstructuraInterfaces
             }
         }
 
-        private void nuevoPostreTextBox_TextChanged(object sender, EventArgs e)
-        {
-            ControlBotones1();
-        }
-
         private void DarDeAltaButton_Click_1(object sender, EventArgs e)
         {
             string nuevoPostre = nuevoPostreTextBox.Text;
@@ -92,9 +89,9 @@ namespace proyectoEstructuraInterfaces
 
                     postresListBox.Items.Add(nuevoPostre);
                     postresComboBox.Items.Add(nuevoPostre);
-                    MessageBox.Show("Postre dado de alta exitosamente");
+                    MessageBox.Show("Postre agregado exitosamente");
+                    nuevoPostreTextBox.Clear();
 
-                    AgregarIngredientesButton.Focus();
                 }
                 else
                 {
@@ -109,26 +106,32 @@ namespace proyectoEstructuraInterfaces
 
         private void AgregarIngredientesButton_Click_1(object sender, EventArgs e)
         {
-            string nombrePostre = postresListBox.SelectedItem.ToString();
+            string nombrePostre = postresComboBox.SelectedItem.ToString();
+            string nombreIngrediente = nuevosIngredientesTextBox.Text;
 
-            if (!string.IsNullOrEmpty(nombrePostre))
+            if (nombreIngrediente != "")
             {
-                int indice = Array.IndexOf(postres, nombrePostre);
-
-                string nuevosIngredientes = nuevosIngredientesTextBox.Text;
-                string[] nuevosIngredientesArray = nuevosIngredientes.Split(',');
-
-                foreach (var ingrediente in nuevosIngredientesArray)
+                if (nombrePostre != "")
                 {
-                    ingredientes[indice].AddLast(ingrediente.Trim());
+                    int indice = Array.IndexOf(postres, null);
+
+
+                    string nuevosIngredientes = nuevosIngredientesTextBox.Text;
+                    string[] nuevosIngredientesArray = nuevosIngredientes.Split(',');
+
+                    foreach (var ingrediente in nuevosIngredientesArray)
+                    {
+                        ingredientes[indice].AddLast(ingrediente.Trim());
+                        ingredientesListBox.Items.Add(nombreIngrediente);
+                        comboBoxIngredientes.Items.Add(nombreIngrediente);
+                    }
+
+                    MessageBox.Show("Ingredientes agregados exitosamente");
+
+                    nuevosIngredientesTextBox.Clear();
                 }
-
-                MessageBox.Show("Ingredientes agregados exitosamente");
-
-                nuevosIngredientesTextBox.Clear();
             }
         }
-
         private void EliminarIngredientesButton_Click_1(object sender, EventArgs e)
         {
             string nombrePostre = postresListBox.SelectedItem.ToString();
@@ -148,6 +151,23 @@ namespace proyectoEstructuraInterfaces
                 {
                     MessageBox.Show("Ingrediente no encontrado");
                 }
+            }
+        }
+
+        private void nuevoPostreTextBox_TextChanged(object sender, EventArgs e)
+        {
+            //ControlBotones1();
+        }
+
+        private void MostrarTablas_Click(object sender, EventArgs e)
+        {
+            postresListBox.Items.Clear();
+            ingredientesListBox.Items.Clear();
+            comboBoxIngredientes.Text = "";
+            // Limpiar el text box 
+            if (postresComboBox.SelectedIndex >= 0)
+            {
+
             }
         }
     }
